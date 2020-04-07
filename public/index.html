@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Two-Factor Auth</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.1/css/bulma.min.css" integrity="sha256-1nEaE91OpXJD7M6W5uSiqxhdmrY+lOOTHC1iUxU9Pds=" crossorigin="anonymous" />
+    <script defer src="bundle.js"></script>
+
+    <style>
+        input, button { margin-bottom: 1rem; display: block; }
+    </style>
+    
+</head>
+<body class="content section">
+    <h1>Two Factor Auth with Firebase Demo</h1>
+    <div id="2fa-captcha"></div>
+
+    <h3>Auth State</h3>
+
+    <div id="user"></div>
+
+    <h3>1. Sign Up and Verify Email</h3>
+
+    <input class="input" id="signup-email" value="hello@fireship.io"> 
+    <input class="input" id="signup-password" value="redalert"> 
+
+    <button class="button is-success"  id="signup-button">Sign Up as New User</button><br>
+
+    <hr>
+
+    <h3>2. Enroll in 2FA</h3>
+
+    <h5>2a. Enroll Phone</h5>
+
+    <input class="input" id="enroll-phone" value="+"> 
+
+    <button class="button is-primary" id="enroll-button">Enroll</button>
+
+    <h5>2a. Verify Code</h5>
+
+    <input class="input" id="enroll-code" value=""> 
+    <button class="button is-success" id="enroll-verify">Verify</button>
+
+
+    <h3>3. Sign Out</h3>
+
+    <button class="button is-warning" id="signout">SignOut</button>
+    
+
+    <h3>4. Login with 2FA</h3>
+
+    <h5>4a. Enter password</h5>
+
+    <input class="input" id="login-email" value="hello@fireship.io"> 
+    <input class="input" id="login-password" value="redalert"> 
+    <button class="button is-primary" id="login-button">Login as Returning User</button><br>
+
+    <h5>4b. Verify Code</h5>
+    <input class="input" id="login-code" value=""> 
+    <button class="button is-success" id="login-verify">Verify</button>
+
+</body>
+</html>
